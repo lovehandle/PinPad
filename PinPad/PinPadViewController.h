@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PinPadViewController : UIViewController
+@interface PinPadViewController : UIViewController {
+    NSString *pin;
+    int tries;
+    
+    IBOutlet UILabel *pinMessage;
+    
+    IBOutlet UILabel *pinLabel1;
+    IBOutlet UILabel *pinLabel2;
+    IBOutlet UILabel *pinLabel3;
+    IBOutlet UILabel *pinLabel4;
+}
+
+@property (retain, nonatomic) NSString *pin;
+@property int tries;
+
+- (IBAction)digitPressed:(UIButton *)sender;
+
 
 @end
